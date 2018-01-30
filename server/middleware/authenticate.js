@@ -8,6 +8,7 @@ var authenticate = (req, res, next) => {
             return Promise.reject();
         }
 
+        // IMPORTANT - sets the user in the request for later access
         req.user = user;
         req.token = token;
         next();
